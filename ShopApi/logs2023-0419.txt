@@ -1,0 +1,45 @@
+2023-04-19 15:36:15.1393: ProductController started
+2023-04-19 15:36:15.5152: ProductController ended
+2023-04-19 18:07:17.4708: OrderLineController started
+2023-04-19 18:07:17.5691: string Blogas el. paštas Email System.ComponentModel.DataAnnotations.ValidationException: Blogas el. paštas
+   at ShopApi.Services.Users.CreateUserService.Validate(CreateUserModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Users\CreateUserService.cs:line 55
+   at ShopApi.Services.Users.CreateUserService.CallAsync(CreateUserModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Users\CreateUserService.cs:line 20
+   at ShopApi.Controllers.OrderLineController.CreateAsync(CreateUserModel userModel) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Controllers\OrderLineController.cs:line 63
+2023-04-19 18:07:17.5697: OrderLineController ended
+2023-04-19 18:07:37.3038: OrderLineController started
+2023-04-19 18:07:38.8220: OrderLineController ended
+2023-04-19 18:12:31.6883: OrderLineController started
+2023-04-19 18:12:32.0425: OrderLineController ended
+2023-04-19 18:16:02.0487: OrderLineController started
+2023-04-19 18:30:09.4752: OrderController started
+2023-04-19 18:30:09.5725:  Aprasymas yra privalomas Description System.ComponentModel.DataAnnotations.ValidationException: Aprasymas yra privalomas
+   at ShopApi.Services.Orders.CreateOrderService.Validate(CreateOrderModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Orders\CreateOrderService.cs:line 57
+   at ShopApi.Services.Orders.CreateOrderService.CallAsync(CreateOrderModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Orders\CreateOrderService.cs:line 20
+   at ShopApi.Controllers.OrderController.CreateAsync(CreateOrderModel userModel) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Controllers\OrderController.cs:line 63
+2023-04-19 18:30:09.5729: OrderLineController ended
+2023-04-19 18:30:26.3076: OrderController started
+2023-04-19 18:30:26.3468:  Aprasymas yra privalomas Description System.ComponentModel.DataAnnotations.ValidationException: Aprasymas yra privalomas
+   at ShopApi.Services.Orders.CreateOrderService.Validate(CreateOrderModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Orders\CreateOrderService.cs:line 57
+   at ShopApi.Services.Orders.CreateOrderService.CallAsync(CreateOrderModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Orders\CreateOrderService.cs:line 20
+   at ShopApi.Controllers.OrderController.CreateAsync(CreateOrderModel userModel) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Controllers\OrderController.cs:line 63
+2023-04-19 18:30:26.3471: OrderLineController ended
+2023-04-19 18:31:24.9781: OrderController started
+2023-04-19 18:31:26.4893: OrderLineController ended
+2023-04-19 18:31:27.8537: OrderController started
+2023-04-19 18:31:28.0363: OrderLineController ended
+2023-04-19 18:31:49.0006: OrderLineController started
+2023-04-19 18:31:49.2191: OrderLineController ended
+2023-04-19 18:42:47.3998: UsersController started
+2023-04-19 18:42:47.4989: string Blogas el. paštas Email System.ComponentModel.DataAnnotations.ValidationException: Blogas el. paštas
+   at ShopApi.Services.Users.CreateUserService.Validate(CreateUserModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Users\CreateUserService.cs:line 55
+   at ShopApi.Services.Users.CreateUserService.CallAsync(CreateUserModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Users\CreateUserService.cs:line 20
+   at ShopApi.Controllers.UserController.CreateAsync(CreateUserModel userModel) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Controllers\UserController.cs:line 61
+2023-04-19 18:42:47.4993: UsersController ended
+2023-04-19 18:42:49.2901: UsersController started
+2023-04-19 18:42:49.3297: string Blogas el. paštas Email System.ComponentModel.DataAnnotations.ValidationException: Blogas el. paštas
+   at ShopApi.Services.Users.CreateUserService.Validate(CreateUserModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Users\CreateUserService.cs:line 55
+   at ShopApi.Services.Users.CreateUserService.CallAsync(CreateUserModel model) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Services\Users\CreateUserService.cs:line 20
+   at ShopApi.Controllers.UserController.CreateAsync(CreateUserModel userModel) in C:\Users\vania\OneDrive\Рабочий стол\PROJECT\ShopApi\Controllers\UserController.cs:line 61
+2023-04-19 18:42:49.3301: UsersController ended
+2023-04-19 18:43:01.4750: UsersController started
+2023-04-19 18:43:01.7869: UsersController ended
