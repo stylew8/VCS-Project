@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2m7vqECW7/dYQvwDBIh2RkgrP59Pg4XVP9G2QW7nWVY31eM5vAshITgZpCXynHz3x1XIpqIHfj3KcnMbl+SZnA==",
+  "dgSpecHash": "6k6uvajMuprbppE3naJevlGn68c6HYg7dnxfbusA+YELOaRpb/+9wL9GNwCyO1eHpis6HiBbF4gDJ2d4HzWmOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\ShopApi\\ShopApi.csproj",
+  "projectFilePath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\ShopApi\\ShopApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vania\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\vania\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
