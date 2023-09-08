@@ -5442,11 +5442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccessNew\\DataAccessNew.csproj",
+      "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj",
       "projectName": "DataAccessNew",
-      "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccessNew\\DataAccessNew.csproj",
+      "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj",
       "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccessNew\\obj\\",
+      "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",

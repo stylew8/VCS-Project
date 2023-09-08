@@ -93,7 +93,7 @@ namespace WpfApp
 
                 var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
 
-                var response = await httpClient.PostAsync("http://stylew8-001-site1.ctempurl.com/api/User", content);
+                var response = await httpClient.PostAsync("http://foreshop-001-site1.atempurl.com/api/User", content);// foreshop-001-site1.atempurl.com
 
                 var nextPage = new PaskyraLoggedWindow(user,Setup);
 

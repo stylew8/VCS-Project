@@ -12,8 +12,8 @@
             <RowDefinition Height="141*"/>
             <RowDefinition Height="701*"/>
         </Grid.RowDefinitions>
-        <Image Margin="787,42,0,68" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
-        <Image Margin="881,0,0,73" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
+        <Image Margin="787,42,0,68" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+        <Image Margin="881,0,0,73" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,7 +23,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="39,21,804,47" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image1.png" Stretch="Fill"/>
+        <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
         <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000" Grid.RowSpan="2"/>
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip2" Content="" HorizontalAlignment="Left" Margin="65,38,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click_1" Cursor="Hand">

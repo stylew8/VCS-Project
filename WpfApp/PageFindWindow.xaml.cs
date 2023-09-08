@@ -84,7 +84,7 @@ namespace WpfApp
         {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync("http://stylew8-001-site1.ctempurl.com/api/Product/name/" + TxtFind);
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/Product/name/" + TxtFind);
 
             var responseContent = await response.Content.ReadAsStringAsync();
 

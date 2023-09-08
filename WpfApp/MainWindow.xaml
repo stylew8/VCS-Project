@@ -11,8 +11,8 @@
             <RowDefinition Height="141*"/>
             <RowDefinition Height="701*"/>
         </Grid.RowDefinitions>
-        <Image Margin="787,42,0,68" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
-        <Image Margin="881,0,0,59" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
+        <Image Margin="787,42,0,68" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+        <Image Margin="881,0,0,59" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,7 +22,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="39,21,804,47" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image1.png" Stretch="Fill"/>
+        <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip" Content="" HorizontalAlignment="Left" Margin="59,43,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click" Cursor="Hand">
             <Button.OpacityMask>
@@ -54,7 +54,6 @@
                 <MenuItem x:Name="menuFans" Header="FANS" Width="160" Height="33" Background="#FF6356E5" Foreground="Black" BorderBrush="#FF6356E5" Cursor="Hand" Click="menuFans_Click"/>
             </MenuItem>
         </Menu>
-        <Image Margin="116,71,116,316" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image4.png" Stretch="Fill" Grid.Row="1"/>
         <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="924,42,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="47" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Cursor="Hand" Click="btnPaskyra_Click">
             <Button.OpacityMask>
@@ -87,6 +86,7 @@
         <Button x:Name="btnAtsijungti" Content="Atsijungti" HorizontalAlignment="Left" Margin="780,94,0,0" VerticalAlignment="Top" Height="14" Width="65" FontFamily="Agency FB" FontSize="8" Background="#FF983535" Click="btnAtsijungti_Click" />
         <TextBox x:Name="txtFind" HorizontalAlignment="Left" Height="28" Margin="284,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" BorderBrush="#FF383A3E"/>
         <Button x:Name="btnFind" Content="Ieskoti" HorizontalAlignment="Left" Height="27" Margin="638,51,0,0" VerticalAlignment="Top" Width="40" BorderBrush="#FF9C8B8B" Click="btnFind_Click"/>
+        <Image Margin="116,71,116,316" Source="Image4.png" Stretch="Fill" Grid.Row="1"/>
 
     </Grid>
 </Window>

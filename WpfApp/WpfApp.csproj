@@ -7,24 +7,42 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Image1.png" />
-  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Image1.png" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Resource Include="Image2.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Image3.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Image4.png" />
+	</ItemGroup>
+
   <ItemGroup>
     <Folder Include="Converter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Image2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

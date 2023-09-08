@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
-
+﻿
 namespace ShopApi.Models.User
 {
     public class UserModel

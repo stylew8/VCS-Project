@@ -95,7 +95,7 @@ namespace WpfApp
 
             var content = new StringContent(JsonConvert.SerializeObject(User), Encoding.UTF8, "application/json");
 
-            var response = await httpClient.PatchAsync("http://stylew8-001-site1.ctempurl.com/api/User/"+ User.Id, content);
+            var response = await httpClient.PatchAsync("http://foreshop-001-site1.atempurl.com/api/User/" + User.Id, content);
 
             if (response.IsSuccessStatusCode)
             {

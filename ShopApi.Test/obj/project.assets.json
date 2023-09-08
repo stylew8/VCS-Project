@@ -11443,11 +11443,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\ShopApi.Test\\ShopApi.Test.csproj",
+      "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\ShopApi.Test.csproj",
       "projectName": "ShopApi.Test",
-      "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\ShopApi.Test\\ShopApi.Test.csproj",
+      "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\ShopApi.Test.csproj",
       "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\ShopApi.Test\\obj\\",
+      "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11464,11 +11464,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccessNew\\DataAccessNew.csproj": {
-              "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccessNew\\DataAccessNew.csproj"
+            "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj": {
+              "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj"
             },
-            "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\ShopApi\\ShopApi.csproj": {
-              "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\ShopApi\\ShopApi.csproj"
+            "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj": {
+              "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj"
             }
           }
         }

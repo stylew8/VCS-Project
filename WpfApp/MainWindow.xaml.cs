@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Query.Internal;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using ShopApi.Models.User;
 using System;
 using System.Collections.Generic;
