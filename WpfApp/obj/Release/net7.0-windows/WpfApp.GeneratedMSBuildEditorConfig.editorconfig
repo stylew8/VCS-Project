@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WpfApp
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\
+=======
+build_property.ProjectDir = C:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f

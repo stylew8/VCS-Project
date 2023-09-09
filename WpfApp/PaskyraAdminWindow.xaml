@@ -26,7 +26,11 @@
             </Image.RenderTransform>
         </Image>
         <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
+<<<<<<< HEAD
         <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000"/>
+=======
+        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000" Grid.RowSpan="2"/>
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip2" Content="" HorizontalAlignment="Left" Margin="65,38,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click_1" Cursor="Hand">
             <Button.OpacityMask>

@@ -7,22 +7,46 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+<<<<<<< HEAD
   <ItemGroup>
     <None Remove="Image1.png" />
     <None Remove="Image2.png" />
     <None Remove="Image3.png" />
     <None Remove="Image4.png" />
   </ItemGroup>
+=======
+
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Image2.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Image3.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Image4.png" />
+	</ItemGroup>
+
+  <ItemGroup>
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
     <Folder Include="Converter\" />
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="Image1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -35,6 +59,17 @@
     <Resource Include="Image4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+=======
+    <None Update="Image2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
   </ItemGroup>
 
 </Project>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿C:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\obj\Release\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
 
 FC:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\AllOrdersWindow.xaml;;
@@ -13,4 +14,21 @@ FC:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\PageF
 FC:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\PaskyraAdminWindow.xaml;;
 FC:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\PaskyraLoggedWindow.xaml;;
 FC:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\RegistrationWindow.xaml;;
+=======
+﻿C:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\obj\Release\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
+
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\AllOrdersWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\BagWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\CpuWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\FansWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\GpuWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\LoggInWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\MainWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\MotherWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\OrderWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\PageFindWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\PaskyraAdminWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\PaskyraLoggedWindow.xaml;;
+FC:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\RegistrationWindow.xaml;;
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
 

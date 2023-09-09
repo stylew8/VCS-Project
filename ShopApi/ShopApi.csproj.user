@@ -4,7 +4,11 @@
     <ActiveDebugProfile>http</ActiveDebugProfile>
     <Controller_SelectedScaffolderID>MvcControllerEmptyScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
+<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>C:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\ShopApi\Properties\PublishProfiles\FTPProfile.pubxml</NameOfLastUsedPublishProfile>
+=======
+    <NameOfLastUsedPublishProfile>C:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\ShopApi\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

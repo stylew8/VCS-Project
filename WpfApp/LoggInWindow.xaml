@@ -13,6 +13,7 @@
             <RowDefinition Height="181*"/>
             <RowDefinition Height="769*"/>
         </Grid.RowDefinitions>
+<<<<<<< HEAD
         <Ellipse HorizontalAlignment="Center" Height="853" Margin="0,10,0,0" VerticalAlignment="Top" Width="1112" Grid.Row="1" RenderTransformOrigin="0.49,0.492">
             <Ellipse.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -25,6 +26,9 @@
             </Ellipse.Fill>
         </Ellipse>
         <Image Margin="784,44,0,80" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+=======
+        <Image Margin="787,42,0,68" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
         <Image Margin="881,0,0,73" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
             <Image.RenderTransform>
                 <TransformGroup>

@@ -13,12 +13,10 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\vania\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\vania\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\vania\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
-      "System.Reflection.NullabilityInfoContext.IsSupported": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

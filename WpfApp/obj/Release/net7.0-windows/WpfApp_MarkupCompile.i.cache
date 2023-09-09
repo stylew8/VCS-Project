@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\obj\Release\net7.0-windows\
+=======
+C:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\obj\Release\net7.0-windows\
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
 WpfApp
 none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
+<<<<<<< HEAD
 C:\Users\vania\OneDrive\Рабочий стол\PROJECT\vcsProject\WpfApp\App.xaml
+=======
+C:\Users\vania\OneDrive\Рабочий стол\git\VCS-Project\WpfApp\App.xaml
+>>>>>>> b23c86a131a78484650aed5c9ffe74fbf34b3b6f
 13-391444507
 
 231878208819
