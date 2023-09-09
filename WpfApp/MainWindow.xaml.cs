@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Query.Internal;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using ShopApi.Models.User;
 using System;
 using System.Collections.Generic;
@@ -33,6 +32,11 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         public MainWindow(UserModel user, Setups setups)
@@ -40,7 +44,13 @@ namespace WpfApp
             InitializeComponent();
             User = user;
             Setup = setups;
+
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User==null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         private void btnTaip_Click(object sender, RoutedEventArgs e)

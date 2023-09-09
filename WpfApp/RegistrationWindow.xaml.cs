@@ -31,6 +31,11 @@ namespace WpfApp
             User = user;
             Setup = setups;
             lblBagCounter1.Content = setups.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
@@ -40,6 +45,15 @@ namespace WpfApp
 
             this.Close();
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void btnTaip_Click_1(object sender, RoutedEventArgs e)
         {
@@ -93,7 +107,7 @@ namespace WpfApp
 
                 var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
 
-                var response = await httpClient.PostAsync("http://stylew8-001-site1.ctempurl.com/api/User", content);
+                var response = await httpClient.PostAsync("http://foreshop-001-site1.atempurl.com/api/User", content);
 
                 var nextPage = new PaskyraLoggedWindow(user,Setup);
 
@@ -138,6 +152,19 @@ namespace WpfApp
             page.Show();
 
             this.Close();
+        }
+
+        private void btnRegistr_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnRegistr_Click(sender, e);
+            }
         }
     }
 }

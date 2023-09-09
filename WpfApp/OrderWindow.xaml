@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="OrderWindow" Height="960" Width="1000">
-
+                Title="TAIP shop" Height="960" Width="1000"
+        ResizeMode="CanResize"
+        Icon="Image1.png">
     <Grid Margin="0,0,0,7">
         <Grid.RowDefinitions>
-            <RowDefinition Height="158*"/>
-            <RowDefinition Height="779*"/>
+            <RowDefinition Height="168*"/>
+            <RowDefinition Height="769*"/>
         </Grid.RowDefinitions>
-        <Image Margin="787,42,0,68" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
-        <Image Margin="881,0,0,73" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
+        <Image Margin="787,42,0,68" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+        <Image Margin="881,0,0,73" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,8 +24,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="39,21,804,47" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image1.png" Stretch="Fill"/>
-        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000" Grid.RowSpan="2"/>
+        <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
+        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000"/>
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip2" Content="" HorizontalAlignment="Left" Margin="65,38,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click_1" Cursor="Hand">
             <Button.OpacityMask>
@@ -56,11 +57,18 @@
                 <MenuItem x:Name="menuFans" Header="FANS" Width="160" Height="33" Background="#FF6356E5" Foreground="Black" BorderBrush="#FF6356E5" Cursor="Hand" Click="menuFans_Click"/>
             </MenuItem>
         </Menu>
-        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="47" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
         <Label x:Name="lblEror" Content="" HorizontalAlignment="Left" Margin="812,164,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Height="26" Width="10"/>
-        <Label x:Name="lblBagCounter1" Content="" HorizontalAlignment="Left" Margin="927,28,0,0" VerticalAlignment="Top" Height="26" Width="10"/>
+        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="927,38,0,0" VerticalAlignment="Top" Height="26" Width="10"/>
         <Label x:Name="lblErorDelete" Content="" HorizontalAlignment="Left" Margin="764,67,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Width="15" Height="26"/>
-        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="47" Margin="884,35,0,0" VerticalAlignment="Top" Width="48"  Cursor="Hand" Click="btnBag_Click">
+        <Label Content="Užsakymas" HorizontalAlignment="Left" Margin="138,38,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Height="42" Width="134"/>
+        <Label Content="Pasirinkite pristatymo buda:" HorizontalAlignment="Left" Margin="221,106,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="170"/>
+        <RadioButton x:Name="rbPris" Content="Atsiemimas parduotuveje" HorizontalAlignment="Left" Margin="282,137,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="1" Height="15" Width="153"/>
+        <Label Content="Pasirinkite atsiskaitymo buda:" HorizontalAlignment="Left" Margin="221,162,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="170"/>
+        <RadioButton x:Name="rbAtsis" Content="Apmokejimas atsiimant" HorizontalAlignment="Left" Margin="282,193,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="2" Height="15" Width="142"/>
+        <Button x:Name="btnUzsakyti" Content="Uzsakyti" HorizontalAlignment="Left" Height="41" Margin="341,349,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117" Background="#FF3FA797" Click="btnUzsakyti_Click"/>
+        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="303,316,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Height="26" Width="10"/>
+        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="58" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
+        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="47" Margin="879,48,0,0" VerticalAlignment="Top" Width="58"  Cursor="Hand" Click="btnBag_Click">
             <Button.OpacityMask>
                 <ImageBrush/>
             </Button.OpacityMask>
@@ -74,13 +82,24 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Label Content="Užsakymas" HorizontalAlignment="Left" Margin="138,38,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Height="42" Width="134"/>
-        <Label Content="Pasirinkite pristatymo buda:" HorizontalAlignment="Left" Margin="221,106,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="170"/>
-        <RadioButton x:Name="rbPris" Content="Atsiemimas parduotuveje" HorizontalAlignment="Left" Margin="282,137,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="1"/>
-        <Label Content="Pasirinkite atsiskaitymo buda:" HorizontalAlignment="Left" Margin="221,162,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="170"/>
-        <RadioButton x:Name="rbAtsis" Content="Apmokejimas atsiimant" HorizontalAlignment="Left" Margin="282,193,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="2"/>
-        <Button x:Name="btnUzsakyti" Content="Uzsakyti" HorizontalAlignment="Left" Height="41" Margin="341,349,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117" Background="#FF3FA797" Click="btnUzsakyti_Click"/>
-        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="303,316,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red"/>
+        <Button x:Name="btnAtsijungti" Content="Atsijungti" HorizontalAlignment="Left" Margin="782,102,0,0" VerticalAlignment="Top" Height="12" Width="58" FontFamily="Agency FB" FontSize="10" Background="#FF983535" Click="btnAtsijungti_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="5" Opacity="0.7" />
+            </Button.Effect>
+        </Button>
 
 
 

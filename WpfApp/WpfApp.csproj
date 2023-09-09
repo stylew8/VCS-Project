@@ -9,6 +9,9 @@
 
   <ItemGroup>
     <None Remove="Image1.png" />
+    <None Remove="Image2.png" />
+    <None Remove="Image3.png" />
+    <None Remove="Image4.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,15 +19,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Image1.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Converter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

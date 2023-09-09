@@ -1,20 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "I41vWl5tytc9Jf7Dxfq6IFkT0+NIvB7Jt5jXZ1B1ZAdUx3Eh/+NwR3Z2+7PvD67lzo3TBqcTts/tR0BUo9wzHw==",
-  "success": false,
+  "dgSpecHash": "ud0EF9yftfqrmEa1UEo6uRF58LcOM9hbiN8xZR0Xuu+zkDEzkLPV5iBgzROJR4xJBEER8CWn9naYr8Hu03TwEw==",
+  "success": true,
   "projectFilePath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\WpfApp\\WpfApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vania\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccess\\DataAccess.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\PROJECT\\vcsProject\\DataAccess\\DataAccess.csproj",
-      "targetGraphs": [
-        "net7.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

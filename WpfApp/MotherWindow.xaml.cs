@@ -32,7 +32,21 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
             var page = new BagWindow(User, Setup);
@@ -92,7 +106,7 @@ namespace WpfApp
         {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync("http://stylew8-001-site1.ctempurl.com/api/Product/category/category/Mother");
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/Product/category/category/Motherboard");
 
             var responseContent = await response.Content.ReadAsStringAsync();
 
@@ -113,6 +127,11 @@ namespace WpfApp
 
             if (item != null)
             {
+                if (Setup.Bag == null)
+                {
+                    Setup.Bag = new List<ProductModel>();
+                }
+
                 lblEror.Content = "";
                 Setup.Bag.Add(item);
                 Setup.BagCounter++;
@@ -125,5 +144,20 @@ namespace WpfApp
 
         }
 
+        private void dtgProducts_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 1)
+            {
+                var row = sender as DataGridRow;
+                if (row != null)
+                {
+                    if (row.IsSelected)
+                    {
+                        row.IsSelected = false;
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
     }
 }

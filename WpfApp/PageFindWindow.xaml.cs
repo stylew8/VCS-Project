@@ -33,7 +33,21 @@ namespace WpfApp
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
             TxtFind = txtFind;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void menuCpu_Click(object sender, RoutedEventArgs e)
         {
@@ -84,7 +98,7 @@ namespace WpfApp
         {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync("http://stylew8-001-site1.ctempurl.com/api/Product/name/" + TxtFind);
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/Product/name/" + TxtFind);
 
             var responseContent = await response.Content.ReadAsStringAsync();
 

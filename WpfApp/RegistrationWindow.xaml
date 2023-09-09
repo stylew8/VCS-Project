@@ -5,14 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="960" Width="1000">
-    <Grid Margin="0,0,0,7">
+                Title="TAIP shop" Height="560" Width="985"
+        ResizeMode="CanResize"
+        Icon="Image1.png">
+    <Grid Height="877" VerticalAlignment="Top" KeyUp="Grid_KeyUp">
         <Grid.RowDefinitions>
-            <RowDefinition Height="141*"/>
-            <RowDefinition Height="701*"/>
+            <RowDefinition Height="173*"/>
+            <RowDefinition Height="764*"/>
         </Grid.RowDefinitions>
-        <Image Margin="787,42,0,68" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
-        <Image Margin="881,0,0,73" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
+
+        <Ellipse HorizontalAlignment="Left" Height="671" Margin="-30,11,0,0" VerticalAlignment="Top" Width="1053" Grid.Row="1">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6356E5"/>
+                    <GradientStop Color="#FFCED1D4" Offset="1"/>
+                    <GradientStop Color="#FFB8A8BD" Offset="0.667"/>
+                    <GradientStop Color="#FF9C98FF" Offset="0.326"/>
+                    <GradientStop Color="#FFD4C2C2" Offset="0.81"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Image Margin="787,42,0,71" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+        <Image Margin="881,0,0,73" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,8 +37,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="39,21,804,47" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image1.png" Stretch="Fill"/>
-        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000" Grid.RowSpan="2"/>
+        <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
+        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000"/>
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip2" Content="" HorizontalAlignment="Left" Margin="65,38,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click_1" Cursor="Hand">
             <Button.OpacityMask>
@@ -39,7 +54,7 @@
                 <ImageBrush ImageSource="/Image1.png"/>
             </Button.BorderBrush>
         </Button>
-        <Menu x:Name="menuCategories" Margin="0,114,796,769" Background="#FF6356E5" BorderBrush="#FF6356E5" Grid.RowSpan="2" HorizontalAlignment="Right" Width="174">
+        <Menu x:Name="menuCategories" Margin="0,114,796,8" Background="#FF6356E5" BorderBrush="#FF6356E5" HorizontalAlignment="Right" Width="174">
             <MenuItem Header="Prekiu kategorijos" Height="54" Width="168" RenderTransformOrigin="0.535,0.333" BorderBrush="#FF6356E5" >
                 <MenuItem.RenderTransform>
                     <TransformGroup>
@@ -55,25 +70,123 @@
                 <MenuItem x:Name="menuFans" Header="FANS" Width="160" Height="33" Background="#FF6356E5" Foreground="Black" BorderBrush="#FF6356E5" Cursor="Hand" Click="menuFans_Click"/>
             </MenuItem>
         </Menu>
-        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="924,27,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="47" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
-        <Label Content="Registracija:" HorizontalAlignment="Left" Margin="204,40,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Label Content="Username:" HorizontalAlignment="Left" Margin="252,104,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtboxUsername" HorizontalAlignment="Left" Height="26" Margin="318,104,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
-        <Label Content="Vardas:" HorizontalAlignment="Left" Margin="270,135,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtboxName" HorizontalAlignment="Left" Height="26" Margin="318,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
-        <Label Content="Pavarde:" HorizontalAlignment="Left" Margin="264,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtboxSurname" HorizontalAlignment="Left" Height="26" Margin="318,166,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="276,197,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtboxEmail" HorizontalAlignment="Left" Height="26" Margin="318,197,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
-        <Label Content="Slaptazodis:" HorizontalAlignment="Left" Margin="472,104,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Pakartokite slaptažodi:" HorizontalAlignment="Left" Margin="416,135,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button x:Name="btnRegistr" Content="Registruotis" HorizontalAlignment="Center" Height="34" Margin="0,256,0,0" Grid.Row="1" VerticalAlignment="Top" Width="114" BorderBrush="Black" Background="#FF6356E5" Click="btnRegistr_Click"/>
-        <Label x:Name="lblDuomError" Content="" HorizontalAlignment="Left" Margin="409,228,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red"/>
-        <Label x:Name="lblSlaptik" Content="" HorizontalAlignment="Left" Margin="660,105,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red"/>
-        <PasswordBox x:Name="txtboxPassword" HorizontalAlignment="Left" Height="26" Margin="557,105,0,0" Grid.Row="1" VerticalAlignment="Top" Width="113"/>
-        <PasswordBox x:Name="txtboxPasswordRepeat" HorizontalAlignment="Left" Height="26" Margin="557,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="113"/>
-        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="47" Margin="884,38,0,0" VerticalAlignment="Top" Width="48" Click="btnBag_Click" Cursor="Hand">
+        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="923,34,0,0" VerticalAlignment="Top" Height="26" Width="16"/>
+        <Label Content="Registracija:" HorizontalAlignment="Left" Margin="411,69,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="42" Width="146"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="283,128,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="51" FontFamily="Agency FB"/>
+        <TextBox x:Name="txtboxUsername" HorizontalAlignment="Left" Height="26" Margin="335,128,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" SelectionBrush="{x:Null}" Foreground="{x:Null}" Background="#FFFFF6F6">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Vardas:" HorizontalAlignment="Left" Margin="296,159,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="39" FontFamily="Agency FB"/>
+        <TextBox x:Name="txtboxName" HorizontalAlignment="Left" Height="26" Margin="335,159,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Pavarde:" HorizontalAlignment="Left" Margin="291,190,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="43" FontFamily="Agency FB"/>
+        <TextBox x:Name="txtboxSurname" HorizontalAlignment="Left" Height="26" Margin="335,190,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="301,221,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="33" FontFamily="Agency FB"/>
+        <TextBox x:Name="txtboxEmail" HorizontalAlignment="Left" Height="26" Margin="335,221,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="98">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Slaptazodis:" HorizontalAlignment="Left" Margin="504,190,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="55" FontFamily="Agency FB"/>
+        <Label Content="Pakartokite slaptažodi:" HorizontalAlignment="Left" Margin="465,220,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="104" FontFamily="Agency FB"/>
+        <Button x:Name="btnRegistr" Content="Registruotis" HorizontalAlignment="Left" Height="34" Margin="426,278,0,0" Grid.Row="1" VerticalAlignment="Top" Width="114" BorderBrush="Black" Background="#FF6356E5" Click="btnRegistr_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="lblDuomError" Content="" HorizontalAlignment="Left" Margin="426,252,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Height="26" Width="10"/>
+        <Label x:Name="lblSlaptik" Content="" HorizontalAlignment="Left" Margin="677,129,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Height="26" Width="10"/>
+        <PasswordBox x:Name="txtboxPassword" HorizontalAlignment="Left" Height="26" Margin="574,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="113">
+            <PasswordBox.Style>
+                <Style TargetType="{x:Type PasswordBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </PasswordBox.Style>
+        </PasswordBox>
+
+        <PasswordBox x:Name="txtboxPasswordRepeat" HorizontalAlignment="Left" Height="26" Margin="574,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="113">
+            <PasswordBox.Style>
+                <Style TargetType="{x:Type PasswordBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </PasswordBox.Style>
+        </PasswordBox>
+        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="47" Margin="880,55,0,0" VerticalAlignment="Top" Width="55" Click="btnBag_Click" Cursor="Hand">
             <Button.OpacityMask>
                 <ImageBrush/>
             </Button.OpacityMask>
@@ -86,6 +199,34 @@
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
+        </Button>
+        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="56" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.779"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.32"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnAtsijungti" Content="Atsijungti" HorizontalAlignment="Left" Margin="784,96,0,0" VerticalAlignment="Top" Height="12" Width="58" FontFamily="Agency FB" FontSize="10" Background="#FF983535" Click="btnAtsijungti_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="5" Opacity="0.7" />
+            </Button.Effect>
         </Button>
 
     </Grid>

@@ -31,6 +31,20 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
+        }
+
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
         }
 
         private void menuCpu_Click(object sender, RoutedEventArgs e)
@@ -81,7 +95,7 @@ namespace WpfApp
         private async void dtgBag_Loaded(object sender, RoutedEventArgs e)
         {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync("http://stylew8-001-site1.ctempurl.com/api/OrderLine/userid/" + User.Id);
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/OrderLine/userid/" + User.Id);
 
             var responseContent = await response.Content.ReadAsStringAsync();
 

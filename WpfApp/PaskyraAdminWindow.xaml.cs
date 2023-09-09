@@ -34,6 +34,11 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
@@ -43,6 +48,15 @@ namespace WpfApp
 
             this.Close();
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void btnChoosePhoto_Click(object sender, RoutedEventArgs e)
         {
@@ -109,7 +123,7 @@ namespace WpfApp
 
                 var content = new StringContent(JsonConvert.SerializeObject(product), Encoding.UTF8, "application/json");
 
-                var response = await httpClient.PostAsync("http://stylew8-001-site1.ctempurl.com/api/Product", content);
+                var response = await httpClient.PostAsync("http://foreshop-001-site1.atempurl.com/api/Product", content);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -171,7 +185,7 @@ namespace WpfApp
         {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync("http://stylew8-001-site1.ctempurl.com/api/Product");
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/Product");
 
             var responseContent = await response.Content.ReadAsStringAsync();
 
@@ -179,7 +193,7 @@ namespace WpfApp
 
             for (int i = 0;i<=productList.Count;i++)
             {
-               await httpClient.DeleteAsync("http://stylew8-001-site1.ctempurl.com/api/Product/" + i);
+               await httpClient.DeleteAsync("http://foreshop-001-site1.atempurl.com/api/Product/" + i);
             }
         }
     }

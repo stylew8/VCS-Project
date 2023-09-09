@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="PaskyraAdminWindow" Height="960" Width="1000">
+                Title="TAIP shop" Height="960" Width="1000"
+        ResizeMode="CanResize"
+        Icon="Image1.png">
 
     <Grid Margin="0,0,0,7">
         <Grid.RowDefinitions>
-            <RowDefinition Height="141*"/>
-            <RowDefinition Height="701*"/>
+            <RowDefinition Height="170*"/>
+            <RowDefinition Height="767*"/>
         </Grid.RowDefinitions>
-        <Image Margin="787,42,0,68" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
-        <Image Margin="881,0,0,73" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
+        <Image Margin="787,42,0,68" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
+        <Image Margin="881,0,0,73" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,8 +25,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="39,21,804,47" Source="C:\Users\vania\OneDrive\Рабочий стол\PROJECT\WpfApp\Image1.png" Stretch="Fill"/>
-        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000" Grid.RowSpan="2"/>
+        <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
+        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000"/>
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip2" Content="" HorizontalAlignment="Left" Margin="65,38,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click_1" Cursor="Hand">
             <Button.OpacityMask>
@@ -40,7 +42,7 @@
                 <ImageBrush ImageSource="/Image1.png"/>
             </Button.BorderBrush>
         </Button>
-        <Menu x:Name="menuCategories" Margin="0,114,796,769" Background="#FF6356E5" BorderBrush="#FF6356E5" Grid.RowSpan="2" HorizontalAlignment="Right" Width="174">
+        <Menu x:Name="menuCategories" Margin="0,114,796,1" Background="#FF6356E5" BorderBrush="#FF6356E5" HorizontalAlignment="Right" Width="174">
             <MenuItem Header="Prekiu kategorijos" Height="54" Width="168" RenderTransformOrigin="0.535,0.333" BorderBrush="#FF6356E5" >
                 <MenuItem.RenderTransform>
                     <TransformGroup>
@@ -56,29 +58,31 @@
                 <MenuItem x:Name="menuFans" Header="FANS" Width="160" Height="33" Background="#FF6356E5" Foreground="Black" BorderBrush="#FF6356E5" Cursor="Hand" Click="menuFans_Click"/>
             </MenuItem>
         </Menu>
-        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="924,27,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="47" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
-        <Label x:Name="lblSlaptik" Content="" HorizontalAlignment="Left" Margin="660,105,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red"/>
-        <Label Content="Admin panel" HorizontalAlignment="Left" Margin="30,32,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24"/>
-        <Label Content="Sukurti produkta:" HorizontalAlignment="Left" Margin="81,100,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Produkto pavadinimas:" HorizontalAlignment="Left" Margin="81,140,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="924,38,0,0" VerticalAlignment="Top" Height="26" Width="16"/>
+        <Label x:Name="lblSlaptik" Content="" HorizontalAlignment="Left" Margin="660,105,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Height="26" Width="10"/>
+        <Label Content="Admin panel" HorizontalAlignment="Left" Margin="30,32,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42" Width="145"/>
+        <Label Content="Sukurti produkta:" HorizontalAlignment="Left" Margin="81,100,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="101"/>
+        <Label Content="Produkto pavadinimas:" HorizontalAlignment="Left" Margin="81,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="131"/>
         <TextBox x:Name="txtNameProd" HorizontalAlignment="Left" Margin="212,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="22"/>
-        <Label Content="Produkto aprasymas:" HorizontalAlignment="Left" Margin="91,176,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Produkto aprasymas:" HorizontalAlignment="Left" Margin="91,176,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="121"/>
         <TextBox x:Name="txtDescProd" HorizontalAlignment="Left" Margin="212,176,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="70"/>
         <TextBox x:Name="txtKategorijaProd" HorizontalAlignment="Left" Margin="212,260,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="22"/>
-        <Label Content="Produkto kategorija:" HorizontalAlignment="Left" Margin="86,256,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Produkto kategorija:" HorizontalAlignment="Left" Margin="86,256,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="117"/>
         <TextBox x:Name="txtQuantityProd" HorizontalAlignment="Left" Margin="212,298,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="14" Height="22"/>
-        <Label Content="Produkto kiekis:" HorizontalAlignment="Left" Margin="110,296,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="vnt." HorizontalAlignment="Left" Margin="275,294,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Produkto kiekis:" HorizontalAlignment="Left" Margin="110,296,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="94"/>
+        <Label Content="vnt." HorizontalAlignment="Left" Margin="275,294,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="29"/>
         <TextBox x:Name="txtPriceProd" HorizontalAlignment="Left" Margin="212,324,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="14" Height="22"/>
-        <Label Content="Produkto kaina:" HorizontalAlignment="Left" Margin="110,322,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="eur." HorizontalAlignment="Left" Margin="275,320,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Produkto kaina:" HorizontalAlignment="Left" Margin="110,322,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="93"/>
+        <Label Content="eur." HorizontalAlignment="Left" Margin="275,320,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="30"/>
         <Button Content="Prideti produkta" HorizontalAlignment="Left" Height="33" Margin="194,420,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Background="#FFBD9BE8" Click="Button_Click"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="410" Margin="406,63,0,0" Grid.Row="1" VerticalAlignment="Top" Width="0"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="466" Margin="406,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2"/>
         <Button x:Name="btnChoosePhoto" Content="Issirinkite foto.." HorizontalAlignment="Left" Height="19" Margin="206,359,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Click="btnChoosePhoto_Click"/>
-        <Label x:Name="lblDuomError" Content="" HorizontalAlignment="Left" Margin="138,390,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" Foreground="Red"/>
-        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="47" Margin="884,37,0,0" VerticalAlignment="Top" Width="48" Click="btnBag_Click" Cursor="Hand">
+        <Label x:Name="lblDuomError" Content="" HorizontalAlignment="Left" Margin="138,390,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" Foreground="Red" Height="26" Width="10"/>
+        <Button x:Name="btnDeleteAll" Content="Delete visus produktus" HorizontalAlignment="Left" Height="31" Margin="80,692,0,0" Grid.Row="1" VerticalAlignment="Top" Width="143" Background="Red" BorderBrush="#FF616161" Foreground="#FF42137F" Click="btnDeleteAll_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="466" Margin="703,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2"/>
+        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="60" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
+        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="48" Margin="880,48,0,0" VerticalAlignment="Top" Width="60" Click="btnBag_Click" Cursor="Hand">
             <Button.OpacityMask>
                 <ImageBrush/>
             </Button.OpacityMask>
@@ -92,7 +96,24 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnDeleteAll" Content="Delete visus produktus" HorizontalAlignment="Left" Height="31" Margin="80,692,0,0" Grid.Row="1" VerticalAlignment="Top" Width="143" Background="Red" BorderBrush="#FF616161" Foreground="#FF42137F" Click="btnDeleteAll_Click"/>
+        <Button x:Name="btnAtsijungti" Content="Atsijungti" HorizontalAlignment="Left" Margin="782,102,0,0" VerticalAlignment="Top" Height="12" Width="58" FontFamily="Agency FB" FontSize="10" Background="#FF983535" Click="btnAtsijungti_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="5" Opacity="0.7" />
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

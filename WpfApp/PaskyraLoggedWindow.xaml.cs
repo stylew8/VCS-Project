@@ -37,6 +37,11 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
@@ -55,6 +60,15 @@ namespace WpfApp
 
             this.Close();
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void btnPaskyra_Click(object sender, RoutedEventArgs e)
         {
@@ -95,7 +109,7 @@ namespace WpfApp
 
             var content = new StringContent(JsonConvert.SerializeObject(User), Encoding.UTF8, "application/json");
 
-            var response = await httpClient.PatchAsync("http://stylew8-001-site1.ctempurl.com/api/User/"+ User.Id, content);
+            var response = await httpClient.PatchAsync("http://foreshop-001-site1.atempurl.com/api/User/" + User.Id, content);
 
             if (response.IsSuccessStatusCode)
             {

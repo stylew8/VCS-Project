@@ -32,7 +32,21 @@ namespace WpfApp
             User = user;
             Setup = setups;
             lblBagCounter.Content = setups.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
             var page = new BagWindow(User, Setup);
@@ -54,7 +68,7 @@ namespace WpfApp
         {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync("http://stylew8-001-site1.ctempurl.com/api/User/username/" + txtboxUsername.Text);
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/User/username/" + txtboxUsername.Text);
 
             var responseContent = await response.Content.ReadAsStringAsync();
 
@@ -125,6 +139,22 @@ namespace WpfApp
             page.Show();
 
             this.Close();
+        }
+
+        private void btnLogg_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnLogg_Click(sender, e);
+            }
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnLogg_Click(sender, e);
+            }
         }
     }
 }

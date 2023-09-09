@@ -31,7 +31,21 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
         private void menuCpu_Click(object sender, RoutedEventArgs e)
         {
             var page = new CpuWindow(User, Setup);
@@ -108,7 +122,7 @@ namespace WpfApp
 
                     var content = new StringContent(JsonConvert.SerializeObject(order), Encoding.UTF8, "application/json");
 
-                    var response = await httpClient.PostAsync("http://stylew8-001-site1.ctempurl.com/api/Order", content);
+                    var response = await httpClient.PostAsync("http://foreshop-001-site1.atempurl.com/api/Order", content);
                     if (!response.IsSuccessStatusCode)
                     {
                         MessageBox.Show("RESPONSE");
@@ -125,7 +139,7 @@ namespace WpfApp
 
                         var contentOrderLine = new StringContent(JsonConvert.SerializeObject(orderLine), Encoding.UTF8, "application/json");
 
-                        var response1 = await httpClient.PostAsync("http://stylew8-001-site1.ctempurl.com/api/OrderLine", contentOrderLine);
+                        var response1 = await httpClient.PostAsync("http://foreshop-001-site1.atempurl.com/api/OrderLine", contentOrderLine);
 
                         if (!response1.IsSuccessStatusCode)
                         {
