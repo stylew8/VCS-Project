@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using WpfApp.Model;
 
 namespace WpfApp
@@ -34,6 +35,11 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
@@ -43,6 +49,15 @@ namespace WpfApp
 
             this.Close();
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void btnChoosePhoto_Click(object sender, RoutedEventArgs e)
         {
@@ -57,9 +72,10 @@ namespace WpfApp
 
                     string filePath = openFileDialog.FileName;
 
+                   
                     bitmap = new BitmapImage(new Uri(filePath));
                 }
-                var encoder = new JpegBitmapEncoder(); 
+                var encoder = new JpegBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(bitmap));
 
                 using (var stream = new MemoryStream())
@@ -67,9 +83,12 @@ namespace WpfApp
                     encoder.Save(stream);
                     Bitmap = stream.ToArray();
                 }
+
+                lblFoto.Content = "✔️";
             }
             catch (Exception ex)
             {
+                lblFoto.Content = "❌";
                 using (var writer = new StreamWriter("loggs"))
                 {
                     writer.WriteLine(ex.Message);
@@ -86,8 +105,8 @@ namespace WpfApp
             if (txtNameProd.Text == "" ||
                 txtKategorijaProd.Text == "" ||
                 txtDescProd.Text == "" ||
-                txtPriceProd.Text == ""||
-                txtQuantityProd.Text == ""||
+                txtPriceProd.Text == "" ||
+                txtQuantityProd.Text == "" ||
                 Bitmap == null)
             {
                 lblDuomError.Content = "Kazkurie duomenys nebuvo ivesti";
@@ -169,17 +188,127 @@ namespace WpfApp
 
         private async void btnDeleteAll_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("Ar tikrai norite ištrinti visus produktus?", "Patvirtinimas", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                var httpClient = new HttpClient();
+
+                var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/Product");
+
+                var responseContent = await response.Content.ReadAsStringAsync();
+
+                var productList = JsonConvert.DeserializeObject<List<ProductModel>>(responseContent);
+
+                for (int i = 0; i <= productList.Count; i++)
+                {
+                    await httpClient.DeleteAsync("http://foreshop-001-site1.atempurl.com/api/Product/" + i);
+                }
+            }
+        }
+
+        private async void btnDeleteById_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MessageBoxResult result = MessageBox.Show("Ar tikrai norite ištrinti šį produktą?", "Patvirtinimas", MessageBoxButton.YesNo);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    var httpClient = new HttpClient();
+
+                    await httpClient.DeleteAsync("http://foreshop-001-site1.atempurl.com/api/Product/" + txtProdID.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                using (var writer = new StreamWriter("loggs"))
+                {
+                    writer.WriteLine(ex.Message);
+                }
+            }
+
+        }
+
+        private async void btnDeleteUser_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MessageBoxResult result = MessageBox.Show("Ar tikrai norite ištrinti šį produktą?", "Patvirtinimas", MessageBoxButton.YesNo);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    var httpClient = new HttpClient();
+
+                    await httpClient.DeleteAsync("http://foreshop-001-site1.atempurl.com/api/User/" + txtProdID_Copy.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                using (var writer = new StreamWriter("loggs"))
+                {
+                    writer.WriteLine(ex.Message);
+                }
+            }
+        }
+
+        private async void btnChange_Click(object sender, RoutedEventArgs e)
+        {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/Product");
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/User/username/" + txtUsername.Text);
 
             var responseContent = await response.Content.ReadAsStringAsync();
 
-            var productList = JsonConvert.DeserializeObject<List<ProductModel>>(responseContent);
+            var user = JsonConvert.DeserializeObject<UserModel>(responseContent);
 
-            for (int i = 0;i<=productList.Count;i++)
+           
+
+            if (user != null)
             {
-               await httpClient.DeleteAsync("http://foreshop-001-site1.atempurl.com/api/Product/" + i);
+                user.Password = "default";
+                var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
+
+                var response1 = await httpClient.PatchAsync("http://foreshop-001-site1.atempurl.com/api/User/" + user.Id, content);
+
+                if (response1.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Informacija buvo sekmingai pakeista");
+                }
+                else
+                {
+                    MessageBox.Show("Informacija nebuvo pakeista, ivyko klaida");
+                }
+            }
+        }
+
+        private async void btnGive_Click(object sender, RoutedEventArgs e)
+        {
+            var httpClient = new HttpClient();
+
+            var response = await httpClient.GetAsync("http://foreshop-001-site1.atempurl.com/api/User/username/" + txtUsernameGive.Text);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            var user = JsonConvert.DeserializeObject<UserModel>(responseContent);
+
+
+            if (user != null)
+            {
+                var httpClient1 = new HttpClient();
+                user.Premissions = "admin";
+                var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
+
+                var response1 = await httpClient1.PatchAsync("http://foreshop-001-site1.atempurl.com/api/User/" + user.Id, content);
+
+                if (response1.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Informacija buvo sekmingai pakeista");
+                }
+                else
+                {
+                    MessageBox.Show("Informacija nebuvo pakeista, ivyko klaida");
+                }
             }
         }
     }

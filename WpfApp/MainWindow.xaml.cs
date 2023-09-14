@@ -32,6 +32,11 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         public MainWindow(UserModel user, Setups setups)
@@ -39,12 +44,18 @@ namespace WpfApp
             InitializeComponent();
             User = user;
             Setup = setups;
+
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         private void btnTaip_Click(object sender, RoutedEventArgs e)
         {
-            var newPage = new MainWindow(User,Setup);
+            var newPage = new MainWindow(User, Setup);
 
             newPage.Show();
 
@@ -55,13 +66,13 @@ namespace WpfApp
         {
             if (Setup == null)
             {
-            Setup.Logging = "unUser";
-            Setup.BagCounter = 0;
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
             }
 
             if (Setup.Logging == "unUser")
             {
-                var pageLog = new LoggInWindow(User,Setup);
+                var pageLog = new LoggInWindow(User, Setup);
 
                 pageLog.Show();
 
@@ -69,7 +80,7 @@ namespace WpfApp
             }
             else if (User.Premissions == "user")
             {
-                var pagePaskyra = new PaskyraLoggedWindow(User,Setup);
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
 
                 pagePaskyra.Show();
 
@@ -77,7 +88,7 @@ namespace WpfApp
             }
             else if (User.Premissions == "admin")
             {
-                var pageAdmin = new PaskyraAdminWindow(User,Setup);
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
                 pageAdmin.Show();
                 this.Close();
             }
@@ -122,7 +133,7 @@ namespace WpfApp
 
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
-            var page = new BagWindow(User,Setup);
+            var page = new BagWindow(User, Setup);
 
             page.Show();
 
@@ -145,7 +156,7 @@ namespace WpfApp
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
-            var page = new PageFindWindow(User,Setup,txtFind.Text);
+            var page = new PageFindWindow(User, Setup, txtFind.Text);
 
             page.Show();
 

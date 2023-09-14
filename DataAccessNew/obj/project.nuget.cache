@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9xwvlax//j0sDGFctkor1Mv/cslP+rZIHjYj/ffplz012n8mVEnUrls+tFT/JHfJtTXIfA8QA2w8WxmEsnRwPw==",
+  "dgSpecHash": "J6RpL1EWLhk9rcOkrkFT9rXMyevA82J+hFbw9z6rcKXI0Gj0NK/VEgAY1ww0jk8/8tq2ptRMpmaftRcLjOqO2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj",
+  "projectFilePath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vania\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\vania\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

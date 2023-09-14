@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\ShopApi.Test.csproj": {}
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi.Test\\ShopApi.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj": {
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj",
         "projectName": "DataAccessNew",
-        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj",
         "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\obj\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\ShopApi.Test.csproj": {
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi.Test\\ShopApi.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\ShopApi.Test.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi.Test\\ShopApi.Test.csproj",
         "projectName": "ShopApi.Test",
-        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\ShopApi.Test.csproj",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi.Test\\ShopApi.Test.csproj",
         "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi.Test\\obj\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,11 +115,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj": {
-                "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj"
+              "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj"
               },
-              "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj": {
-                "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj"
+              "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi\\ShopApi.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi\\ShopApi.csproj"
               }
             }
           }
@@ -175,14 +175,14 @@
         }
       }
     },
-    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj": {
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi\\ShopApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi\\ShopApi.csproj",
         "projectName": "ShopApi",
-        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\ShopApi.csproj",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi\\ShopApi.csproj",
         "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\ShopApi\\obj\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\ShopApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -200,8 +200,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj": {
-                "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\DataAccessNew\\DataAccessNew.csproj"
+              "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\DataAccessNew\\DataAccessNew.csproj"
               }
             }
           }

@@ -37,52 +37,30 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
-        private void btnBag_Click(object sender, RoutedEventArgs e)
+
+        private void btnTaip_Click_1(object sender, RoutedEventArgs e)
         {
-            var page = new BagWindow(User, Setup);
+            var newPage = new MainWindow(User, Setup);
+
+            newPage.Show();
+
+            this.Close();
+        }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
 
             page.Show();
 
             this.Close();
         }
 
-        private void btnTaip_Click_1(object sender, RoutedEventArgs e)
-        {
-            var newPage = new MainWindow(User,Setup);
-
-            newPage.Show();
-
-            this.Close();
-        }
-
-        private void btnPaskyra_Click(object sender, RoutedEventArgs e)
-        {
-            if (Setup.Logging == "unUser")
-            {
-                var pageLog = new LoggInWindow(User, Setup);
-
-                pageLog.Show();
-
-                this.Close();
-            }
-            else if (Setup.Logging == "user")
-            {
-                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
-
-                pagePaskyra.Show();
-
-                this.Close();
-            }
-            else
-            {
-                var pageAdmin = new PaskyraAdminWindow(User,Setup);
-
-                pageAdmin.Show();
-
-                this.Close();
-            }
-        }
 
         private async void btnUpdateinfo_Click(object sender, RoutedEventArgs e)
         {
@@ -105,7 +83,7 @@ namespace WpfApp
             {
                 MessageBox.Show("Informacija nebuvo pakeista, ivyko klaida");
             }
-            
+
         }
 
         private void menuCpu_Click(object sender, RoutedEventArgs e)
@@ -139,6 +117,47 @@ namespace WpfApp
         private void menuFans_Click(object sender, RoutedEventArgs e)
         {
             var page = new FansWindow(User, Setup);
+
+            page.Show();
+
+            this.Close();
+        }
+
+        private void btnPaskyra_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (Setup == null)
+            {
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
+            }
+
+            if (Setup.Logging == "unUser")
+            {
+                var pageLog = new LoggInWindow(User, Setup);
+
+                pageLog.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "user")
+            {
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
+
+                pagePaskyra.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "admin")
+            {
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
+                pageAdmin.Show();
+                this.Close();
+            }
+        }
+
+        private void btnBag_Click(object sender, MouseButtonEventArgs e)
+        {
+            var page = new BagWindow(User, Setup);
 
             page.Show();
 

@@ -25,12 +25,17 @@ namespace WpfApp
         public UserModel User { get; set; }
         public Setups Setup { get; set; }
 
-        public RegistrationWindow(UserModel user,Setups setups)
+        public RegistrationWindow(UserModel user, Setups setups)
         {
             InitializeComponent();
             User = user;
             Setup = setups;
             lblBagCounter1.Content = setups.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
@@ -40,6 +45,15 @@ namespace WpfApp
 
             this.Close();
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void btnTaip_Click_1(object sender, RoutedEventArgs e)
         {
@@ -80,12 +94,12 @@ namespace WpfApp
             {
                 var user = new UserModel()
                 {
-                   Username = txtboxUsername.Text,
-                   Password = password,
-                   Name = txtboxName.Text,
-                   Surname = txtboxSurname.Text,
-                   Email = txtboxEmail.Text,
-                   Premissions = "user"
+                    Username = txtboxUsername.Text,
+                    Password = password,
+                    Name = txtboxName.Text,
+                    Surname = txtboxSurname.Text,
+                    Email = txtboxEmail.Text,
+                    Premissions = "user"
                 };
 
 
@@ -95,7 +109,7 @@ namespace WpfApp
 
                 var response = await httpClient.PostAsync("http://foreshop-001-site1.atempurl.com/api/User", content);// foreshop-001-site1.atempurl.com
 
-                var nextPage = new PaskyraLoggedWindow(user,Setup);
+                var nextPage = new PaskyraLoggedWindow(user, Setup);
 
                 nextPage.Show();
 
@@ -138,6 +152,51 @@ namespace WpfApp
             page.Show();
 
             this.Close();
+        }
+
+        private void btnRegistr_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnRegistr_Click(sender, e);
+            }
+        }
+
+        private void btnPaskyra_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (Setup == null)
+            {
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
+            }
+
+            if (Setup.Logging == "unUser")
+            {
+                var pageLog = new LoggInWindow(User, Setup);
+
+                pageLog.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "user")
+            {
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
+
+                pagePaskyra.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "admin")
+            {
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
+                pageAdmin.Show();
+                this.Close();
+            }
         }
     }
 }

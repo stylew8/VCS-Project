@@ -31,6 +31,20 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
+        }
+
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
         }
 
         private void menuCpu_Click(object sender, RoutedEventArgs e)
@@ -105,17 +119,20 @@ namespace WpfApp
                 Setup.Bag.Remove(item);
                 Setup.BagCounter--;
                 lblBagCounter1.Content = Setup.BagCounter;
+
+                dtgBag.ItemsSource = Setup.Bag;
+
                 var page = new BagWindow(User, Setup);
 
                 page.Show();
 
-                this.Close();          
+                this.Close();
             }
             else
             {
                 lblErorDelete.Content = "Norint istrinti preke is jusu krepselio, reikia issirinkti ji";
             }
-            
+
         }
 
         private void btnPirkti_Click(object sender, RoutedEventArgs e)
@@ -158,6 +175,58 @@ namespace WpfApp
             else
             {
                 MessageBox.Show("Norint paziureti uzsakytus produktus, reikia uzeiti i paskyra arba uzsiregistruotis");
+            }
+        }
+
+        private void btnPaskyra_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (Setup == null)
+            {
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
+            }
+
+            if (Setup.Logging == "unUser")
+            {
+                var pageLog = new LoggInWindow(User, Setup);
+
+                pageLog.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "user")
+            {
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
+
+                pagePaskyra.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "admin")
+            {
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
+                pageAdmin.Show();
+                this.Close();
+            }
+        }
+
+        private void btnDeleteAll_Click(object sender, RoutedEventArgs e)
+        {
+            var item = dtgBag.SelectedItem as ProductModel;
+            MessageBoxResult result = MessageBox.Show("Ar tikrai norite ištrinti visa krepšelį?", "Patvirtinimas", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Setup.Bag = new List<ProductModel>();
+                Setup.BagCounter = 0;
+                lblBagCounter1.Content = Setup.BagCounter;
+                dtgBag.ItemsSource = new List<ProductModel>();
+
+                //var page = new BagWindow(User, Setup);
+
+                //page.Show();
+
+                //this.Close();
             }
         }
     }

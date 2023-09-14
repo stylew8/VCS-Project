@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="PaskyraAdminWindow" Height="960" Width="1000">
+                Title="TAIP shop" Height="960" Width="1000"
+        ResizeMode="CanResize"
+        Icon="Image1.png">
 
     <Grid Margin="0,0,0,7">
         <Grid.RowDefinitions>
-            <RowDefinition Height="141*"/>
-            <RowDefinition Height="701*"/>
+            <RowDefinition Height="170*"/>
+            <RowDefinition Height="767*"/>
         </Grid.RowDefinitions>
         <Image Margin="787,42,0,68" Source="Image2.png" Stretch="Fill" HorizontalAlignment="Left" Width="51"/>
         <Image Margin="881,0,0,73" Source="Image3.png" Stretch="Fill" RenderTransformOrigin="-5.418,1.524" HorizontalAlignment="Left" Width="60" Height="54" VerticalAlignment="Bottom">
@@ -24,6 +26,7 @@
             </Image.RenderTransform>
         </Image>
         <Image Margin="39,21,804,47" Source="Image1.png" Stretch="Fill"/>
+        <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000"/>
         <Rectangle Height="54" Margin="0,114,0,0" Stroke="DarkViolet" VerticalAlignment="Top" Fill="#FF6356E5" HorizontalAlignment="Center" Width="1000" Grid.RowSpan="2"/>
         <Label x:Name="lblBagCounter" Content="0" HorizontalAlignment="Left" Height="28" Margin="1742,0,0,212" VerticalAlignment="Bottom" Width="23"/>
         <Button x:Name="btnTaip2" Content="" HorizontalAlignment="Left" Margin="65,38,0,0" VerticalAlignment="Top" Height="44" Width="117" Click="btnTaip_Click_1" Cursor="Hand">
@@ -40,7 +43,7 @@
                 <ImageBrush ImageSource="/Image1.png"/>
             </Button.BorderBrush>
         </Button>
-        <Menu x:Name="menuCategories" Margin="0,114,796,769" Background="#FF6356E5" BorderBrush="#FF6356E5" Grid.RowSpan="2" HorizontalAlignment="Right" Width="174">
+        <Menu x:Name="menuCategories" Margin="0,114,796,1" Background="#FF6356E5" BorderBrush="#FF6356E5" HorizontalAlignment="Right" Width="174">
             <MenuItem Header="Prekiu kategorijos" Height="54" Width="168" RenderTransformOrigin="0.535,0.333" BorderBrush="#FF6356E5" >
                 <MenuItem.RenderTransform>
                     <TransformGroup>
@@ -56,29 +59,129 @@
                 <MenuItem x:Name="menuFans" Header="FANS" Width="160" Height="33" Background="#FF6356E5" Foreground="Black" BorderBrush="#FF6356E5" Cursor="Hand" Click="menuFans_Click"/>
             </MenuItem>
         </Menu>
-        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="924,27,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="47" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
-        <Label x:Name="lblSlaptik" Content="" HorizontalAlignment="Left" Margin="660,105,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red"/>
-        <Label Content="Admin panel" HorizontalAlignment="Left" Margin="30,32,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24"/>
-        <Label Content="Sukurti produkta:" HorizontalAlignment="Left" Margin="81,100,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Produkto pavadinimas:" HorizontalAlignment="Left" Margin="81,140,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNameProd" HorizontalAlignment="Left" Margin="212,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="22"/>
-        <Label Content="Produkto aprasymas:" HorizontalAlignment="Left" Margin="91,176,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtDescProd" HorizontalAlignment="Left" Margin="212,176,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="70"/>
-        <TextBox x:Name="txtKategorijaProd" HorizontalAlignment="Left" Margin="212,260,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="22"/>
-        <Label Content="Produkto kategorija:" HorizontalAlignment="Left" Margin="86,256,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtQuantityProd" HorizontalAlignment="Left" Margin="212,298,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="14" Height="22"/>
-        <Label Content="Produkto kiekis:" HorizontalAlignment="Left" Margin="110,296,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="vnt." HorizontalAlignment="Left" Margin="275,294,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPriceProd" HorizontalAlignment="Left" Margin="212,324,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="14" Height="22"/>
-        <Label Content="Produkto kaina:" HorizontalAlignment="Left" Margin="110,322,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="eur." HorizontalAlignment="Left" Margin="275,320,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Prideti produkta" HorizontalAlignment="Left" Height="33" Margin="194,420,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Background="#FFBD9BE8" Click="Button_Click"/>
+        <Label x:Name="lblBagCounter1" Content="0" HorizontalAlignment="Left" Margin="924,38,0,0" VerticalAlignment="Top" Height="26" Width="16"/>
+        <Label x:Name="lblSlaptik" Content="" HorizontalAlignment="Left" Margin="660,105,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Red" Height="26" Width="10"/>
+        <Label Content="Admin panel" HorizontalAlignment="Left" Margin="372,10,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42" Width="193" FontWeight="Bold"/>
+        <Label Content="Produkų panel" HorizontalAlignment="Left" Margin="50,85,0,0" Grid.Row="1" VerticalAlignment="Top" Height="33" Width="148" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Produkto pavadinimas:" HorizontalAlignment="Left" Margin="81,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="131"/>
+        <TextBox x:Name="txtNameProd" HorizontalAlignment="Left" Margin="212,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Produkto aprasymas:" HorizontalAlignment="Left" Margin="91,176,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="121"/>
+        <TextBox x:Name="txtDescProd" HorizontalAlignment="Left" Margin="212,176,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="70">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="txtKategorijaProd" HorizontalAlignment="Left" Margin="212,260,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Produkto kategorija:" HorizontalAlignment="Left" Margin="95,256,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="117"/>
+        <TextBox x:Name="txtQuantityProd" HorizontalAlignment="Left" Margin="212,298,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Produkto kiekis:" HorizontalAlignment="Left" Margin="118,296,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="94"/>
+        <Label Content="vnt." HorizontalAlignment="Left" Margin="275,294,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="29"/>
+        <TextBox x:Name="txtPriceProd" HorizontalAlignment="Left" Margin="212,324,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label Content="Produkto kaina:" HorizontalAlignment="Left" Margin="118,322,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="93"/>
+        <Label Content="eur." HorizontalAlignment="Left" Margin="275,320,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="30"/>
+        <Button Content="Prideti produkta" HorizontalAlignment="Left" Height="33" Margin="194,420,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Background="#FFBD9BE8" Click="Button_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="410" Margin="406,63,0,0" Grid.Row="1" VerticalAlignment="Top" Width="0"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="466" Margin="406,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2"/>
-        <Button x:Name="btnChoosePhoto" Content="Issirinkite foto.." HorizontalAlignment="Left" Height="19" Margin="206,359,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Click="btnChoosePhoto_Click"/>
-        <Label x:Name="lblDuomError" Content="" HorizontalAlignment="Left" Margin="138,390,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" Foreground="Red"/>
-        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="47" Margin="884,37,0,0" VerticalAlignment="Top" Width="48" Click="btnBag_Click" Cursor="Hand">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="466" Margin="406,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2"/>
+        <Button x:Name="btnChoosePhoto" Content="Išsirinkite foto.." HorizontalAlignment="Left" Height="19" Margin="206,359,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Click="btnChoosePhoto_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="lblDuomError" Content="" HorizontalAlignment="Left" Margin="138,390,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" Foreground="Red" Height="26" Width="10"/>
+        <Button x:Name="btnDeleteAll" Content="Delete visus produktus" HorizontalAlignment="Left" Height="31" Margin="53,713,0,0" Grid.Row="1" VerticalAlignment="Top" Width="143" Background="Red" BorderBrush="#FF616161" Foreground="White" Click="btnDeleteAll_Click" Cursor="Hand"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="466" Margin="703,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2"/>
+        <Button x:Name="btnPaskyra" Content="" HorizontalAlignment="Left" Height="60" Margin="787,42,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand"/>
+        <Button x:Name="btnBag" Content="" HorizontalAlignment="Left" Height="48" Margin="880,48,0,0" VerticalAlignment="Top" Width="60" Click="btnBag_Click" Cursor="Hand">
             <Button.OpacityMask>
                 <ImageBrush/>
             </Button.OpacityMask>
@@ -92,7 +195,212 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnDeleteAll" Content="Delete visus produktus" HorizontalAlignment="Left" Height="31" Margin="80,692,0,0" Grid.Row="1" VerticalAlignment="Top" Width="143" Background="Red" BorderBrush="#FF616161" Foreground="#FF42137F" Click="btnDeleteAll_Click"/>
+        <Button x:Name="btnAtsijungti" Content="Atsijungti" HorizontalAlignment="Left" Margin="782,102,0,0" VerticalAlignment="Top" Height="12" Width="58" FontFamily="Agency FB" FontSize="10" Background="#FF983535" Click="btnAtsijungti_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="5" Opacity="0.7" />
+            </Button.Effect>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="318" Margin="196,377,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label x:Name="lblFoto" Content="" HorizontalAlignment="Left" Height="28" Margin="157,356,0,0" Grid.Row="1" VerticalAlignment="Top"  Width="41" Foreground="#FF23E026"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="318" Margin="206,518,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label Content="Produkto ID:" HorizontalAlignment="Left" Margin="103,567,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="80"/>
+        <TextBox x:Name="txtProdID" HorizontalAlignment="Left" Margin="181,569,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button x:Name="btnDeleteById" Content="Delete" HorizontalAlignment="Left" Height="29" Margin="156,604,0,0" Grid.Row="1" VerticalAlignment="Top" Width="72" Background="#FFE03535" Click="btnDeleteById_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Content="Userių panel" HorizontalAlignment="Center" Margin="0,66,0,0" Grid.Row="1" VerticalAlignment="Top" Height="31" Width="148" FontSize="14" FontWeight="Bold"/>
+        <Label Content="User`s ID:" HorizontalAlignment="Left" Margin="440,110,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="80"/>
+        <TextBox x:Name="txtProdID_Copy" HorizontalAlignment="Left" Margin="518,112,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button x:Name="btnDeleteById_Copy" Content="Delete" HorizontalAlignment="Left" Height="29" Margin="540,147,0,0" Grid.Row="1" VerticalAlignment="Top" Width="72" Background="#FFE03535" Click="btnDeleteUser_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Content="User`s username:" HorizontalAlignment="Left" Margin="419,254,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="101"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="518,256,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button x:Name="btnChange" Content="Change" HorizontalAlignment="Left" Height="29" Margin="540,290,0,0" Grid.Row="1" VerticalAlignment="Top" Width="72" Background="#FF50E3C2" Click="btnChange_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="226" Margin="557,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+        </Border>
+        <Label Content="Pakeisti slaptažodį į 'default'" HorizontalAlignment="Left" Margin="426,220,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="179"/>
+        <Label Content="User`s username:" HorizontalAlignment="Left" Margin="419,369,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="101"/>
+        <TextBox x:Name="txtUsernameGive" HorizontalAlignment="Left" Margin="518,371,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontSize="14" Height="22">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Button x:Name="btnGive" Content="Give" HorizontalAlignment="Left" Height="29" Margin="540,405,0,0" Grid.Row="1" VerticalAlignment="Top" Width="72" Background="#FFE3AE50" Click="btnGive_Click" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Content="Duoti ADMIN premissions" HorizontalAlignment="Left" Margin="426,335,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="179"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="226" Margin="557,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+        </Border>
 
     </Grid>
 </Window>

@@ -31,7 +31,21 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
         private void menuCpu_Click(object sender, RoutedEventArgs e)
         {
             var page = new CpuWindow(User, Setup);
@@ -119,7 +133,7 @@ namespace WpfApp
                     {
                         var orderLine = new OrderLineModel()
                         {
-                            OrderId =  User.Id,
+                            OrderId = User.Id,
                             ProductId = item.Id
                         };
 
@@ -148,6 +162,38 @@ namespace WpfApp
                 {
                     MessageBox.Show("Jusu krepselis tuscias");
                 }
+            }
+        }
+
+        private void btnPaskyra_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (Setup == null)
+            {
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
+            }
+
+            if (Setup.Logging == "unUser")
+            {
+                var pageLog = new LoggInWindow(User, Setup);
+
+                pageLog.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "user")
+            {
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
+
+                pagePaskyra.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "admin")
+            {
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
+                pageAdmin.Show();
+                this.Close();
             }
         }
     }

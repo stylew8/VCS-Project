@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\WpfApp\\WpfApp.csproj",
+      "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\WpfApp\\WpfApp.csproj",
       "projectName": "WpfApp",
-      "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\WpfApp\\WpfApp.csproj",
+      "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\WpfApp\\WpfApp.csproj",
       "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project\\WpfApp\\obj\\",
+      "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\git\\VCS-Project NOGIT\\WpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -23,16 +23,30 @@ namespace WpfApp
     public partial class LoggInWindow : Window
     {
         public UserModel User { get; set; }
-        
+
         public Setups Setup { get; set; }
 
-        public LoggInWindow(UserModel user,Setups setups)
+        public LoggInWindow(UserModel user, Setups setups)
         {
             InitializeComponent();
             User = user;
             Setup = setups;
             lblBagCounter.Content = setups.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
         private void btnBag_Click(object sender, RoutedEventArgs e)
         {
             var page = new BagWindow(User, Setup);
@@ -125,6 +139,54 @@ namespace WpfApp
             page.Show();
 
             this.Close();
+        }
+
+        private void btnLogg_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnLogg_Click(sender, e);
+            }
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnLogg_Click(sender, e);
+            }
+        }
+
+        private void Image_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (Setup == null)
+            {
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
+            }
+
+            if (Setup.Logging == "unUser")
+            {
+                var pageLog = new LoggInWindow(User, Setup);
+
+                pageLog.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "user")
+            {
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
+
+                pagePaskyra.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "admin")
+            {
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
+                pageAdmin.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -32,7 +32,22 @@ namespace WpfApp
             User = user;
             Setup = setup;
             lblBagCounter1.Content = Setup.BagCounter;
+
+            if (User == null)
+            {
+                btnAtsijungti.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
+
+        private void btnAtsijungti_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new MainWindow();
+
+            page.Show();
+
+            this.Close();
+        }
+
 
         private void menuCpu_Click(object sender, RoutedEventArgs e)
         {
@@ -120,6 +135,10 @@ namespace WpfApp
 
             if (item != null)
             {
+                if (Setup.Bag == null)
+                {
+                    Setup.Bag = new List<ProductModel>();
+                }
                 lblEror.Content = "";
                 Setup.Bag.Add(item);
                 Setup.BagCounter++;
@@ -130,6 +149,38 @@ namespace WpfApp
                 lblEror.Content = "Noredami prideti reikia issirinkti produkta";
             }
 
+        }
+
+        private void btnPaskyra_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (Setup == null)
+            {
+                Setup.Logging = "unUser";
+                Setup.BagCounter = 0;
+            }
+
+            if (Setup.Logging == "unUser")
+            {
+                var pageLog = new LoggInWindow(User, Setup);
+
+                pageLog.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "user")
+            {
+                var pagePaskyra = new PaskyraLoggedWindow(User, Setup);
+
+                pagePaskyra.Show();
+
+                this.Close();
+            }
+            else if (User.Premissions == "admin")
+            {
+                var pageAdmin = new PaskyraAdminWindow(User, Setup);
+                pageAdmin.Show();
+                this.Close();
+            }
         }
     }
 }
